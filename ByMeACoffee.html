@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #5B4636; /* Dark Coffee color */
+      color: #FFF; /* White text color for better readability */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #8D6A51; /* Light Coffee color */
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      aspect-ratio: 16 / 9; /* Set aspect ratio to 16:9 (adjust as needed) */
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card h1 {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .iframe {
+      width: 100%;
+      height: 100%;
+      border: navajowhite;
+      opacity: 1.5;
+      transform: scale(1.5);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .iframe:hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Mobile-friendly styles */
+    @media screen and (max-width: 967px) {
+      .container {
+        padding: 9px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <h1><big><strong>By Me A Coffee</strong></big></h1>
+        <p>If you find this website helpful or just want to show your appreciation, consider buying me a coffee.
+          Donations help me keep this site running and motivate me to create more content. Your support means a lot!</p>
+        <p>Scan the QR code below to donate:</p>
+      </div>
+      <div class="iframe-wrapper">
+        <!-- Replace the QR code URL below with your donation QR code -->
+        <img class="iframe" src="ByMeACoffee.png" alt="QR Code" />
+      </div>
+      <div class="card-content">
+        <h1><p>Frequently Asked Questions:</p></h1>
+        <h2><strong>What is the range of donation?</strong></h2>
+        <p>You can donate any amount you want. Every contribution, no matter how small, is deeply appreciated.</p><br>
+        <h2><strong>Do I need to donate more than one rupee?</strong></h2>
+        <p>No, you can donate any amount, even as little as one rupee. Every bit counts and makes a difference!</p><br>
+        <h2><strong>How will my donation be used?</strong></h2>
+        <p>Your donation will go towards supporting the maintenance and improvement of this website, and it will motivate me
+          to continue creating valuable content.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

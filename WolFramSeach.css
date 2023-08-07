@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('WolFramSearcHB.png'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+}
+
+.banner {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg); /* Center the text and apply upside-down rotation */
+    white-space: nowrap;
+    animation: slideAnimation 10s linear infinite; /* Apply animation */
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px; /* Slightly smaller margin to separate from the banner */
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 20px; /* Smaller border radius */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    backdrop-filter: blur(10px); /* Apply a blur effect */
+    transition: background-color 0.3s ease, width 0.3s ease; /* Add width transition */
+    padding: 5px; /* Smaller padding */
+}
+
+.search-wrapper:hover {
+    background-color: rgba(255, 255, 255, 1); /* Opaque white background on hover */
+    width: 300px; /* Slightly smaller expanded width on hover */
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    padding: 8px 12px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 20px 0 0 20px; /* Smaller border radius */
+    background-color: transparent; /* Transparent background for the input */
+    flex: 1;
+}
+
+#searchButton {
+    border: none;
+    background-color: transparent; /* Transparent background for the button */
+    cursor: pointer;
+    padding: 8px 12px; /* Smaller padding */
+    border-radius: 0 20px 20px 0; /* Smaller border radius */
+    transition: background-color 0.3s ease;
+    color: red; /* Change the color of the icon to red */
+}
+
+#searchButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background on hover */
+}
+
+/* Animation keyframes */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(-50%) translateY(-100%) rotate(180deg); /* Initial position */
+    }
+    100% {
+        transform: translateX(-50%) translateY(100%) rotate(180deg); /* Fully visible position */
+    }
+}

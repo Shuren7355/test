@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwissCows Search</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background-1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: black;
+      transition: background-image 1s ease;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .search-container {
+     display:block;
+      position: relative;
+      max-width: 500px;
+      
+    }
+
+    .search-bar {
+      width: 100%;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-color: rgba(255, 255, 255, 0, 7);
+      color: black;
+      outline: none;
+      transition: background-color 0s;
+    }
+
+    .search-bar:block {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .search-icon {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+    }
+
+    .encryption-locked {
+      display: block;
+      color: beige;
+      background color: rgba (0, 0, 0, 0, 9)
+      font-size: 70px;
+      margin-bottom: 30px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .search-bar-animation {
+      animation: fadeIn 1s ease, slideIn 1s ease;
+    }
+  </style>
+</head>
+
+<body background="black">
+  <div class="container">
+    <div class="encryption-locked">Encryption Locked</div>
+    <div class="search-container">
+     <div class="search-icon"> 
+        <!-- You can use your preferred search icon or an image here -->
+       <!-- <img src="search-icon.png" alt="Search Icon" width="24" height="24"> -->
+      </div>
+      <input type="text" id="searchInput" class="search-bar search-bar-animation" placeholder="Search SwissCows...">
+    </div>
+  </div>
+
+  <script>
+    const backgroundImages = ['wallpaperflare_wallpaper.png', 'wp821.png', 'wp822.png', 'wp823.png', '6661543.png'];
+    let currentImageIndex = 0;
+
+    function changeBackgroundImage() {
+      currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
+      document.body.style.backgroundImage = `url(${backgroundImages[currentImageIndex]})`;
+    }
+
+    // Change background image every 5 seconds
+    setInterval(changeBackgroundImage, 5000);
+
+    document.getElementById('searchInput').addEventListener('keypress', function(event) {
+      if (event.key === 'Enter') {
+        performSearch();
+      }
+    });
+
+    function performSearch() {
+      const searchQuery = document.getElementById('searchInput').value;
+      if (searchQuery.trim() !== '') {
+        // Build the SwissCows search URL and open it in the same tab
+        const searchUrl = `https://www.swisscows.com/web?query=${encodeURIComponent(searchQuery)}`;
+        window.location.href = searchUrl;
+      }
+    }
+  </script>
+    <div style="position: fixed; bottom: 10px; right: 10px;">
+    <a href="ByMeACoffee.html">
+      <img src="icons8-coffee-100.png" alt="Coffee Cup Icon" width="50" height="50">
+    </a>
+  </div>
+</body>
+
+</html>

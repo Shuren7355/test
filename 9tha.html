@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9th Graders</title>
+  <style>
+    body {
+      font-family: italic , sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #444;
+      padding: 80px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .subject-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+      text-decoration: none;
+    }
+
+    .subject {
+      cursor: pointer;
+      padding: 10px 20px;
+      border: 1px solid #444;
+      border-radius: 60px;
+      margin: 10px;
+      transition: background-color 0.2s ease;
+      animation: fadeInUp 1s ease;
+     text-decoration: none;
+     color: grey;
+    }
+
+    .subject:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .subject-details-container {
+      display: none;
+      padding: 40px;
+      margin: 20px auto;
+      max-width: 500px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 95px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 3s ease;
+    }
+
+    .subject-details-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .subject-details-container p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .subject-about-container {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 17px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1s ease;
+      backdrop-filter: blur(90px);
+    }
+
+    .subject-about-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #663D26;
+    }
+
+    .subject-about-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .subject-about-container li {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .main-subject {
+      font-weight: bold;
+      font-size: 24px;
+      color: #563D26;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 0, 0, 0.2);
+      border-radius: 30px;
+      padding: 5px;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    #searchBar {
+      border: none;
+      background-color: transparent;
+      outline: none;
+      width: 100%;
+    }
+
+    .search-button {
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .subject-about-container a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>9<sup>th</sup> Graders</h1>
+    <div class="search-container">
+      <input type="text" id="searchBar" placeholder="Search subjects...">
+      <button class="search-button">
+        <img src="https://img.icons8.com/metro/26/000000/search.png" alt="Search">
+      </button>
+    </div>
+  </header>
+  <div class="subject-list">
+    <a href="https://drive.google.com/drive/folders/14UUWYSlPDfdYRrdK2gbd2vFfMnNP10WI" class="subject" onclick="showSubjectDetails('Mathematics')">Mathematics</a>
+    <a href="https://drive.google.com/drive/folders/14VBZnZmJJuLf8PQ60SHRgIQcUPl0eJ_o" class="subject" onclick="showSubjectDetails('Science')">Science</a>
+    <a href="https://drive.google.com/drive/folders/12PYZGhv4P-GA0f4FEnfdIp39rSLHc_3Y" class="subject" onclick="showSubjectDetails('English (General)')">English (General)</a>
+    <a href="https://drive.google.com/drive/folders/14aIrWZLg04o8YDuew48GHBgBd6lMMZK2" class="subject" onclick="showSubjectDetails('Geography')">Geography</a>
+    <a href="https://drive.google.com/drive/folders/14aXq7f-JphXZkGiNVBHAVrn68A4CWhtO" class="subject" onclick="showSubjectDetails('History')">History</a>
+    <a href="https://drive.google.com/drive/folders/14erPmHH1J2DoNA95wZvBwHRwwrtNyJV7" class="subject" onclick="showSubjectDetails('Political Science')">Political Science</a>
+    <a href="https://drive.google.com/drive/folders/14fYNUJtVEN2BkajhZlaRcNtuARjbnrqd" class="subject" onclick="showSubjectDetails('Economics')">Economics</a>
+    <a href="https://drive.google.com/drive/folders/14oz-Ml2G2l_HnYsdbW6RcFNRci48zUok" class="subject" onclick="showSubjectDetails('Computer Science')">Computer Science</a>
+    <a href="https://drive.google.com/drive/folders/14s4jYDc2apW1xztF4zt00Ai_kv5tP3gZ" class="subject" onclick="showSubjectDetails('Punjabi(General)')">Punjabi(General)</a>
+    <!--<a href="https://drive.google.com/drive/folders/14tt84j3tZcVn9WhDEpPVJND5_bbdXWLu" class="subject" onclick="showSubjectDetails('Punjabi (Elective)')">Punjabi (Elective)</a>-->
+    <a href="https://drive.google.com/drive/folders/1AjcKXxjhl-6f0vjRDyObN2MvrSJYyZH0" class="subject" onclick="showSubjectDetails('Environmental Studies')">Environmental Science</a>
+    <a href="https://drive.google.com/drive/folders/14wZ9cmbTMdeIKFmbAZMYVU_fvX77t_rD" class="subject" onclick="showSubjectDetails('Hindi')">Hindi</a>
+    <!--<a href="link-to-welcome-life-page.html" class="subject" onclick="showSubjectDetails('Welcome Life')">Welcome Life</a> -->
+  </div>
+  
+  <div class="subject-details-container">
+    <h2 id="subjectHeading"></h2>
+    <p id="subjectDescription"></p>
+  </div>
+  <div class="subject-about-container">
+    <h2>About the Subjects</h2>
+    <ul>
+            <li>  <a href="WolFramAlpha.html" class="main-subject" onclick="showSubjectDetails('Mathematics')">Mathematics:</a> Mathematics is the study of numbers, shapes, and patterns. It includes topics such as arithmetic, geometry, algebra, and statistics.</li>
+      <li><a href="SolarWind.html" class="main-subject" onclick="showSubjectDetails('Science')">Science:</a>Science is the study of the natural world. It covers topics such as biology, chemistry, physics, and environmental science.</li>
+      <li><a href="Kiddle.html" class="main-subject">English (General):</a> English involves the study of language, literature, reading, writing, and communication skills.</li>
+      <li><a href="GoogleMap.html" class="main-subject">Geography:</a> Geography is the study of the Earth's physical features, climate patterns, natural resources, and human interactions with the environment.</li>
+      <li><span class="main-subject" onclick="showSubjectDetails('History')">History:</span> History is the study of past events, civilizations, societies, and human achievements.</li>
+      <li><span class="main-subject" onclick="showSubjectDetails('Political Science')">Political Science:</span> Political Science is the study of government systems, political behavior, public policies, and the theory and practice of politics.</li>
+      <li><span class="main-subject"   onclick="showSubjectDetails('Economics')">Economics:</span> Economics is the study of how individuals, businesses, and societies allocate scarce resources to satisfy unlimited wants and needs.</li>
+      <li><a href="game.html" class="main-subject" >Computer Science:</a> Computer Science introduces students to the basics of programming, computational thinking, and problem-solving using computers.</li>
+      <li><span class="main-subject" onclick="showSubjectDetails('Punjabi (General)')">Punjabi (General):</span> Punjabi is an Indo-Aryan language primarily spoken in the Punjab region of India and Pakistan.</li>
+      <li><span class="main-subject" onclick="showSubjectDetails('Punjabi (Elective)')">Punjabi (Elective):</span> This is an elective subject in Punjabi that provides further specialization in the language and its literature.</li>
+      <li><span class="main-subject"  onclick="showSubjectDetails('Environmental Studies')">Environmental Studies:</span> Environmental Studies is the study of the environment and its interactions with human society.</li>
+      <li><span class="main-subject" onclick="showSubjectDetails('Hindi')">Hindi:</span> Hindi is the national language of India and one of the most widely spoken languages in the world.</li>
+      <!-- Add your subject descriptions here -->
+    </ul>
+  </div>
+  <div style="position: fixed; bottom: 10px; right: 10px;">
+    <a href="ByMeACoffee.html">
+      <img src="icons8-coffee-100.png" alt="Coffee Cup Icon" width="50" height="50">
+    </a>
+  </div>
+  <script>
+    document.getElementById('searchBar').addEventListener('input', function () {
+      const searchTerm = this.value.toLowerCase();
+      const subjects = document.querySelectorAll('.subject');
+      const subjectDetailsContainer = document.querySelector('.subject-details-container');
+
+      subjects.forEach((subject) => {
+        const subjectName = subject.textContent.toLowerCase();
+        if (subjectName.includes(searchTerm)) {
+          subject.style.display = 'block';
+        } else {
+          subject.style.display = 'none';
+        }
+      });
+
+      subjectDetailsContainer.style.display = 'none';
+    });
+
+    function showSubjectDetails(subject) {
+      const subjectDescriptions = document.querySelectorAll('.subject-about-container li');
+      const subjectHeading = document.getElementById('subjectHeading');
+      const subjectDescription = document.getElementById('subjectDescription');
+      const subjectDetailsContainer = document.querySelector('.subject-details-container');
+
+      subjectDescriptions.forEach((description) => {
+        if (description.textContent.includes(subject)) {
+          subjectHeading.textContent = subject;
+          subjectDescription.textContent = description.textContent;
+          subjectDetailsContainer.style.display = 'block';
+          return;
+        }
+      });
+    }
+  </script>
+</body>
+</html>

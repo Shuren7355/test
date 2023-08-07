@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Maps Embed</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-image: url("GoogleMap.png"); /* Replace with your background image URL */
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    #map-container {
+      width: 400px;
+      height: 520px;
+      position: cover;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+    
+    #map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    #text-overlay {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      flex-direction: none;
+      backdrop-filter: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    #map-container:hover #text-overlay {
+      opacity: 1;
+    }
+    
+    #text-overlay h2 {
+      font-size: 10px;
+      margin-bottom: 4px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 8px;
+      border-radius: 0px;
+    }
+    
+    #text h1 {
+      font-size: 36px;
+      text-align: top;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.626448550476!2d-73.97762298461117!3d40.76143347932917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f746417675%3A0x3f77be10d73216a3!2sMuseum%20of%20Modern%20Art%20(MoMA)!5e0!3m2!1sen!2sus!4v1566913581046!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    <div id="text-overlay">
+      <h2>Find New</h2>
+      <!--<p>Visit the MoMA in New York City and explore modern art masterpieces.</p> -->
+      
+    </div
+  </div>
+    <div style="position: fixed; bottom: 10px; right: 10px;">
+    <a href="ByMeACoffee.html">
+      <img src="icons8-coffee-100.png" alt="Coffee Cup Icon" width="50" height="50">
+    </a>
+  </div>
+  <!-- <h1><p>Visit the MoMA in New York City and explore modern art masterpieces.</p></h1> -->
+</body>
+
+</html>
